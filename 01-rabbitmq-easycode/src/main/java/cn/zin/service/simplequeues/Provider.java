@@ -24,7 +24,7 @@ public class Provider {
         String msg = "hello simple!";
         // 直接把消息发送到指定的队列中
         channel.basicPublish("", QUEUE_NAME, null, msg.getBytes());
-        System.out.println("---send msg：" + msg);
+        System.out.println("send msg：" + msg);
         // 关闭
         channel.close();
         connection.close();

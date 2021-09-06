@@ -27,9 +27,9 @@ public class Provider {
         // routingKey
         // error两个都可以收到
         // String routingKey = "error";
-        // info只有Recv2能收到
+        // info只有Consumer02能收到
         // String routingKey = "info";
-        // warning只有Recv2能收到
+        // warning只有Consumer02能收到
         String routingKey = "warning";
         // 生产者发送消息：交换机名称、路由键、消息的其他属性路由标头等、消息正文
         channel.basicPublish(EXCHANGE_NAME, routingKey, null, msg.getBytes());
