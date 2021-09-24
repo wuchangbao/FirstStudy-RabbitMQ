@@ -1,7 +1,8 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="JavaDoc" enabled="true" level="WARNING" enabled_by_default="true">
+    <inspection_tool class="DanglingJavadoc" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JavaDoc" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="TOP_LEVEL_CLASS_OPTIONS">
         <value>
           <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
@@ -30,7 +31,7 @@
       <option name="IGNORE_JAVADOC_PERIOD" value="true" />
       <option name="IGNORE_DUPLICATED_THROWS" value="false" />
       <option name="IGNORE_POINT_TO_ITSELF" value="false" />
-      <option name="myAdditionalJavadocTags" value="date,date:2021/9/5,description:,author:wuchangbao,description:这是生产者,description:生产者,description:消费者1,description:消费者2,description:生产者【简单队列模式中没有交换机，消息直接绑定到队列中】,description:消费者" />
+      <option name="myAdditionalJavadocTags" value="date,date:2021/9/5,description:,author:wuchangbao,description:这是生产者,description:生产者,description:消费者1,description:消费者2,description:生产者【简单队列模式中没有交换机，消息直接绑定到队列中】,description:消费者,author：wuchangbao,description：生产者【简单队列模式中没有交换机，消息直接绑定到队列中】,date：2021/9/5,description：生产者【简单队列模式中没有交换机，消息直接绑定到队列中。】,description：获取Rabbitmq的连接工具,description：消费者1,description：消费者" />
     </inspection_tool>
   </profile>
 </component>

@@ -6,9 +6,9 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 
 /**
- * @author:wuchangbao
- * @description:消费者2
- * @date:2021/9/5
+ * @author：wuchangbao
+ * @description：消费者2
+ * @date：2021/9/5
  */
 public class Consumer02 {
 
@@ -22,7 +22,7 @@ public class Consumer02 {
         // 声明队列
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         // 绑定队列到交换机【队列和交换机的键为bindingkey】
-        // 声明了一个队列，这个队列有三个bindingkey
+        // 声明了一个队列，这个队列有三个bindingkey。
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "error");
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "info");
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "warning");
@@ -48,5 +48,6 @@ public class Consumer02 {
         boolean autoAck = false;
         channel.basicConsume(QUEUE_NAME, autoAck, consumer);
     }
+
 
 }

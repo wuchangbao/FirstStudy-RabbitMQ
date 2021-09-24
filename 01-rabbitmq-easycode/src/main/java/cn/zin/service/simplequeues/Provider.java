@@ -5,9 +5,9 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 
 /**
- * @author:wuchangbao
- * @description:生产者【简单队列模式中没有交换机，消息直接绑定到队列中】
- * @date:2021/9/5
+ * @author：wuchangbao
+ * @description：生产者（简单队列模式中没有交换机，消息直接绑定到队列中。）
+ * @date：2021/9/5
  */
 public class Provider {
 
@@ -29,5 +29,6 @@ public class Provider {
         channel.close();
         connection.close();
     }
+
 
 }

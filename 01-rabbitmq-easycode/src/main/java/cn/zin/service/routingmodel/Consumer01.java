@@ -6,9 +6,9 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 
 /**
- * @author:wuchangbao
- * @description:消费者1
- * @date:2021/9/5
+ * @author：wuchangbao
+ * @description：消费者1
+ * @date：2021/9/5
  */
 public class Consumer01 {
 
@@ -21,7 +21,7 @@ public class Consumer01 {
         final Channel channel = connection.createChannel();
         // 声明队列
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        // 绑定队列到交换机【声明了一个队列，该队列的bindingkey为error】
+        // 绑定队列到交换机【声明了一个队列，该队列的bindingkey为error。】
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "error");
         // 同一时刻服务器只会发一条消息给消费者
         channel.basicQos(1);
@@ -45,5 +45,6 @@ public class Consumer01 {
         boolean autoAck = false;
         channel.basicConsume(QUEUE_NAME, autoAck, consumer);
     }
+
 
 }

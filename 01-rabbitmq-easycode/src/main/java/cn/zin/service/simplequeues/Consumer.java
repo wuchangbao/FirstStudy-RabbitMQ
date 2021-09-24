@@ -6,9 +6,9 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 
 /**
- * @author:wuchangbao
- * @description:消费者
- * @date:2021/9/5
+ * @author：wuchangbao
+ * @description：消费者
+ * @date：2021/9/5
  */
 public class Consumer {
 
@@ -31,5 +31,6 @@ public class Consumer {
         };
         channel.basicConsume(QUEUE_NAME, true, consumer);
     }
+
 
 }

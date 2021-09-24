@@ -7,16 +7,16 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @author:wuchangbao
- * @description: 获取Rabbitmq的连接工具
- * @date:2021/9/5
+ * @author：wuchangbao
+ * @description：获取RabbitMQ的连接工具
+ * @date：2021/9/5
  */
 public class ConnectionUtils {
 
     /**
-     * 获取Rabbitmq的连接
+     * 获取RabbitMQ的连接
      *
-     * @return 连接对象
+     * @return
      * @throws IOException
      * @throws TimeoutException
      */
@@ -25,7 +25,7 @@ public class ConnectionUtils {
         ConnectionFactory factory = new ConnectionFactory();
         // 设置服务地址
         factory.setHost("139.196.254.249");
-        // AMQP 5672
+        // AMQP：5672
         factory.setPort(5672);
         // vhost
         factory.setVirtualHost("/");
@@ -35,5 +35,6 @@ public class ConnectionUtils {
         factory.setPassword("guest");
         return factory.newConnection();
     }
+
 
 }
