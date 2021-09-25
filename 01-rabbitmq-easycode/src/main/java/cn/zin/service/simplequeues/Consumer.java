@@ -4,6 +4,7 @@ import cn.zin.service.ConnectionUtils;
 import com.rabbitmq.client.*;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author：wuchangbao
@@ -25,7 +26,7 @@ public class Consumer {
         DefaultConsumer consumer = new DefaultConsumer(channel) {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
-                String msg = new String(body, "utf-8");
+                String msg = new String(body, StandardCharsets.UTF_8);
                 System.out.println("receive：" + msg);
             }
         };

@@ -33,7 +33,7 @@ public class Provider {
         String routingKey = "warning";
         // 生产者发送消息：交换机名称、路由键、消息的其他属性路由标头等、消息正文。
         channel.basicPublish(EXCHANGE_NAME, routingKey, null, msg.getBytes());
-        System.out.println("-------------send: " + msg);
+        System.out.println("send: " + msg);
         channel.close();
         connection.close();
     }
